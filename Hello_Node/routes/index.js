@@ -1,3 +1,10 @@
+/*
+Router : 경로설정
+spring에서는 Controller클래스로 선언 
+spring에서 Controller가 하는 일과 유사한 기능을 수행한다
+client의 req요청 주소를 분석하여 적절한 요청을 수행하고 
+응답을 수행하는 역할을 한다. => Router
+*/
 var express = require('express');
 var router = express.Router();
 
@@ -18,7 +25,7 @@ router.get('/', function(req, res, next) {
 });
 
 // localhost:3000/home으로 요청을 하면
-router.get("/home",function(req,res){
+router.get("/home/index",function(req,res){
   // 순수한 문자열을 client에게 전달하라 
   res.send("우리나라만세");
 })
