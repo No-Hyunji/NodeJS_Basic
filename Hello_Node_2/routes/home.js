@@ -16,9 +16,9 @@ router.get("/my",function(req,res){
     // res.send("My GET Mapping");
     res.render("home");
 });
-router.get("/input",function(req,res){
+router.post("/input",function(req,res){
     // res.send("INPUT POST Mapping");
-    let m_user = req.body.m_user
+    let m_user = req.body.m_user;
     res.send("입력한 user : " + m_user);
 });
 router.post("/",function(req,res){
